@@ -1,93 +1,82 @@
-import React from "react";
+import React, { use } from 'react';
+import { FaRegTimesCircle } from 'react-icons/fa';
+import { FaCartShopping } from 'react-icons/fa6';
+import { toast } from 'react-toastify';
 
-const Cart = ({ cart, handleRemove, handleCheckout }) => {
+const Cart = ({ cardIds, CardPromise, setCardIds }) => {
+    const CardData = use(CardPromise);
+    const cart = CardData.filter(cart => cardIds.includes(cart.id));
 
-  const total = cart.reduce((sum, item) => sum + item.price, 0);
+    // const {name, price, icon} = cartProduct;
+    const total = cart.reduce((sum, item) => {
+        const priceNumber = Number(item.price.replace("$", ""));
+        return sum + priceNumber;
+    }, 0);
 
-  if (cart.length === 0) {
+    const checkOut = () => {
+        setCardIds([])
+        toast("Purchase successful");
+
+    }
+    const remove = (rID) => {
+        setCardIds(prev => prev.filter(id => id !== rID));
+        toast(<span className='flex justify-center items-center gap-2'>
+            <FaRegTimesCircle className='text-red-700' />
+            <span>Remove from Cart</span>
+        </span>);
+    }
+
     return (
-      <div className="w-3/4 mx-auto py-20 text-center">
-        <h1 className="text-4xl font-bold text-[#101727] mb-4">
-          Your Cart Is Empty 🛒
-        </h1>
+        <div>
+            <div className="w-3/4 mx-auto rounded-2xl  p-8 shadow-xl  border  border-base-200">
+                <h2 className="mb-6 text-2xl font-bold text-base-content">Your Cart</h2>
 
-        <p className="text-[#627382]">
-          Add some amazing digital products to continue.
-        </p>
-      </div>
-    );
-  }
+                {
+                    cardIds.length === 0 ?
+                        <div className='flex justify-center items-center flex-col'>
+                            <FaCartShopping className='w-20 h-20 opacity-80' />
+                            <h3>Your Cart is empty</h3>
+                        </div>
+                        :
+                        <div>
+                            {
+                                cart.map(cartProduct => <div className="mb-6 flex items-center justify-between rounded-2xl bg-base-200 px-6 py-5">
+                                    <div className="flex items-center gap-4">
+                                        <div className="avatar">
+                                            <div className="w-12 rounded-full bg-base-100 ring-1 ring-base-300 p-2">
+                                                <img src={cartProduct.icon} alt="" />
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h3 className=" font-semibold text-base-content">{cartProduct.name}</h3>
+                                            <p className="mt-1 text-2xl text-base-content/60">{cartProduct.price}</p>
+                                        </div>
+                                    </div>
+                                    <button onClick={() => remove(cartProduct.id)}
+                                        className="btn btn-ghost btn-sm text-pink-500 hover:bg-transparent hover:text-pink-600">
+                                        Remove
+                                    </button>
+                                </div>)
+                            }
 
-  return (
-    <div className="w-3/4 mx-auto py-16">
 
-      <div className="flex flex-col gap-6">
 
-        {
-          cart.map((item) => (
 
-            <div
-              key={item.id}
-              className="bg-white border border-[#F1F1F1] rounded-3xl shadow-sm p-6 flex flex-col md:flex-row justify-between items-center gap-6"
-            >
+                            <div className="mb-6 flex items-center justify-between">
 
-              <div className="flex items-center gap-5">
+                                <span className=" text-base-content/60">Total:</span>
+                                <span className="text-3xl font-bold">${total}</span>
+                            </div>
 
-                <div className="bg-[#F9FAFC] rounded-full p-5 text-4xl">
-                  {item.icon}
-                </div>
-
-                <div>
-                  <h1 className="text-2xl font-bold text-[#101727]">
-                    {item.name}
-                  </h1>
-
-                  <p className="text-[#627382]">
-                    ${item.price} / {item.period}
-                  </p>
-                </div>
-
-              </div>
-
-              <button
-                onClick={() => handleRemove(item.id)}
-                className="btn rounded-full bg-red-500 hover:bg-red-600 border-none text-white"
-              >
-                Remove
-              </button>
-
+                            <button onClick={() => checkOut()}
+                                className="btn w-full rounded-full border-none text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-4">
+                                Proceed To Checkout
+                            </button>
+                        </div>
+                }
             </div>
-          ))
-        }
-
-      </div>
-
-      {/* Checkout */}
-      <div className="bg-white border border-[#F1F1F1] rounded-3xl shadow-sm p-8 mt-10">
-
-        <div className="flex justify-between items-center mb-6">
-
-          <h1 className="text-3xl font-bold text-[#101727]">
-            Total
-          </h1>
-
-          <h1 className="text-4xl font-extrabold text-[#4F39F6]">
-            ${total}
-          </h1>
-
         </div>
-
-        <button
-          onClick={handleCheckout}
-          className="btn w-full rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white border-none"
-        >
-          Proceed To Checkout
-        </button>
-
-      </div>
-
-    </div>
-  );
+    );
 };
 
 export default Cart;
