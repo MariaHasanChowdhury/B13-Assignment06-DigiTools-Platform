@@ -2,7 +2,7 @@ import { Suspense, useState } from "react";
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import Navbar from "./Components/Navbar/Navbar";
-import CardHolder from "./Components/Products/CardHolder/CardHolder";
+import CardHolder from "./components/Products/CardHolder/CardHolder";
 import Stat from "./Components/Stat/Stat";
 import Cart from "./Components/Cart/Cart";
 import GetStarted from "./Components/GetStarted/GetStarted";
