@@ -21,3 +21,5 @@ Users can explore premium digital tools, add products to cart, remove items, and
 - Vite – Fast development build tool
 - Vercel – Deployment
 -------
+- 🔗 Repository: https://github.com/MariaHasanChowdhury/B13-Assignment06-DigiTools-Platform
+- 🔗 Live Demo: https://digitools-platform-006-maria.netlify.app/
