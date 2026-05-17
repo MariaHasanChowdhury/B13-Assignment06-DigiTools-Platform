@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Starter",
+    "description": "Essential tools to get you started quickly.",
+    "price": "$9",
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["50+ templates", "Basic customization", "Export to PDF"],
+    "icon": "https://i.ibb.co.com/N2mfJ50p/design-tool.png"
+  },
+  {
+    "id": 2,
+    "name": "Creator",
+    "description": "Perfect for creators who publish frequently.",
+    "price": "$14",
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["80+ templates", "Brand colors", "Export to PDF", "Auto-save drafts"],
+    "icon": "https://i.ibb.co.com/vxp7wnhH/operation.png"
+  },
+  {
+    "id": 3,
+    "name": "Pro",
+    "description": "Professional features for high-quality output.",
+    "price": "$19",
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF", "Unlimited edits"],
+    "icon": "https://i.ibb.co.com/BHzqyRsT/writing-2327400-1.png"
+  },
+  {
+    "id": 4,
+    "name": "Pro Plus",
+    "description": "Advanced tools and priority features for power users.",
+    "price": "$29",
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["150+ templates", "ATS optimization", "Export to PDF", "Priority support", "Advanced layouts"],
+    "icon": "https://i.ibb.co.com/DDsshKL6/social-media.png"
+  },
+  {
+    "id": 5,
+    "name": "Team",
+    "description": "Collaboration features for small teams.",
+    "price": "$59",
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["300+ templates", "Team collaboration", "Role-based access", "Shared brand presets", "Priority support"],
+    "icon": "https://i.ibb.co.com/BHzqyRsT/writing-2327400-1.png"
+  },
+  {
+    "id": 6,
+    "name": "Business",
+    "description": "Best for growing businesses and agencies.",
+    "price": "$99",
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Unlimited templates", "Client workspaces", "Brand presets", "ATS optimization", "Priority support"],
+    "icon": "https://i.ibb.co.com/DDsshKL6/social-media.png"
+  },
+  {
+    "id": 7,
+    "name": "Pro Annual",
+    "description": "Yearly Pro plan with extra savings.",
+    "price": "$19",
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["100+ templates", "ATS optimization", "Export to PDF", "Unlimited edits", "2 months free (vs monthly)"],
+    "icon": "https://i.ibb.co.com/fVjGsDdN/portfolio.png"
+  },
+  {
+    "id": 8,
+    "name": "Business Annual",
+    "description": "Yearly billing for Business with maximum value.",
+    "price": "$99",
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": ["Unlimited templates", "Client workspaces", "Advanced analytics", "Dedicated onboarding", "Priority support"],
+    "icon": "https://i.ibb.co.com/N2mfJ50p/design-tool.png"
+  },
+  {
+    "id": 9,
+    "name": "Lifetime",
+    "description": "Pay once and access core features forever.",
+    "price": "$14",
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": ["All templates included", "ATS optimization", "Export to PDF", "Free updates for life"],
+    "icon": "https://i.ibb.co.com/fVjGsDdN/portfolio.png"
+  },
+  {
+    "id": 10,
+    "name": "Enterprise",
+    "description": "Security, compliance, and dedicated support for large orgs.",
+    "price": "$29",
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "new",
+    "features": ["Unlimited templates", "Single Sign-On (SSO)", "Custom integrations", "SLA & priority support", "Dedicated account manager"],
+    "icon": "https://i.ibb.co.com/N2mfJ50p/design-tool.png"
+  }
+]

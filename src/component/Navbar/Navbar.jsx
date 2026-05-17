@@ -57,7 +57,7 @@ const Navbar = ({cardIds}) => {
 
         <div className="navbar-end gap-3 mr-40">
           <div className="indicator">
-            <span class="indicator-item badge badge-primary badge-sm text-[#101727] font-bold bg-transparent border-none absolute -right-1">{cardIds}</span>
+            <span className="indicator-item badge badge-primary badge-sm text-[#101727] font-bold bg-transparent border-none absolute -right-1">{cardIds}</span>
             <FaShoppingCart className=""/>
           </div>
           <div className="hidden lg:flex gap-4">

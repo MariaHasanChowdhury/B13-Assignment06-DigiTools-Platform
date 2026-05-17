@@ -1,13 +1,13 @@
 import { Suspense, useState } from "react";
 import "./App.css";
-import Banner from "./components/Banner/Banner";
-import Navbar from "./components/Navbar/Navbar";
-import CardHolder from "./components/Products/CardHolder/CardHolder";
-import Stat from "./components/Stat/Stat";
-import Cart from "./components/Cart/Cart";
-import GetStarted from "./components/GetStarted/GetStarted";
-import PricingHolder from "./components/Pricing/PricingHolder/PricingHolder";
-import Footer from "./components/Footer/Footer";
+import Banner from "./component/Banner/Banner";
+import Navbar from "./component/Navbar/Navbar";
+import CardHolder from "./component/Products/CardHolder/CardHolder";
+import Stat from "./component/Stat/Stat";
+import Cart from "./component/Cart/Cart";
+import GetStarted from "./component/GetStarted/GetStarted";
+import PricingHolder from "./component/Pricing/PricingHolder/PricingHolder";
+import Footer from "./component/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 
 
